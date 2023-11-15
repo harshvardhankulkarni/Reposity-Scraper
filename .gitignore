@@ -2,3 +2,4 @@ static/src
 Repositories
 .idea
 venv
+.env

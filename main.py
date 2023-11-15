@@ -1,10 +1,16 @@
+import os
+
 import pandas
 import requests
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
 from flask import Flask, render_template, request, flash, send_from_directory, redirect, url_for
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'SECRET_KEY'
+
+load_dotenv()
+
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 URL = 'https://github.com'
 
 
